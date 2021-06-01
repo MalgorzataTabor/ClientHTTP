@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Gold</title>
+
+
+</head>
+<body>
+<h1 class="jumbotron text-center">Gold</h1>
+<table class="table table-striped table-hover table-sm">
+
+    <thead>
+    <tr class="table table-striped table-hover table-sm">
+        <th>Date</th>
+        <th> Price NBP PLN/gram</th>
+    </tr>
+
+    </thead>
+
+    <tr th:each="gold:${golds}">
+        <td th:text="${gold.getData()}"></td>
+        <td th:text="${gold.getCena()}"></td>
+    </tr>
+</table>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
